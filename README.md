@@ -1,3 +1,18 @@
+* This is a simple React-Flask project *
+
+See this tutorial for info:
+~~~
+https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
+~~~
+
+The Flask API has a single endpoint: /time
+The React frontend calls this endpoint and displays the time.
+
+Note that the Flask app must be running on 
+~~~
+http://thewizard.online:8000 for the thing to work.
+~~~
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

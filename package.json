@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -13,6 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-api": "cd api && /home/nginx_boss/.virtualenvs/srf/bin/flask run -h thewizard.online -p 8000 --no-debug",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -34,5 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
 }
