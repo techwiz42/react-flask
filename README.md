@@ -1,4 +1,4 @@
-* This is a simple React-Flask project *
+# This is a simple React-Flask project 
 
 See this tutorial for info:
 ~~~
