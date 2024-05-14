@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,11 +6,18 @@ import './App.css';
 function App() {
   
   const [currentTime, setCurrentTime] = useState(0)
-  
+  const [theJoke, setTheJoke] = useState(0) 
+
   useEffect(() => {
-    fetch("http://thewizard.online:8000/time")
+    fetch("http://thewizard.online:5000/time")
         .then(res => res.json()).then(data => 
 	      { setCurrentTime(data.time);
+    });
+  }, []);
+  useEffect(() => {
+    fetch("http://thewizard.online:5000/joke")
+	.then(res => res.json()).then(data =>
+	      { setTheJoke(data);
     });
   }, []);
 
@@ -30,7 +36,8 @@ function App() {
         >
           Learn React
         </a>
-	<p>The current time is {currentTime}.</p>
+	<p>The current time is {currentTime} - time for a random joke.</p>
+	<p>{theJoke.setup} {theJoke.punchline}</p>  
       </header>
     </div>
   );
